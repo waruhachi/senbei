@@ -2,6 +2,7 @@ import { GeistSans } from 'geist/font/sans';
 
 import '@/styles/globals.css';
 import { TRPCReactProvider } from '@/trpc/react';
+import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata = {
@@ -21,6 +22,7 @@ export default function RootLayout({
 				<TRPCReactProvider>
 					{children}
 					<SpeedInsights />
+					<Analytics />
 				</TRPCReactProvider>
 			</body>
 		</html>
