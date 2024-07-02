@@ -23,11 +23,13 @@ const config = {
 	importOrderCaseInsensitive: true,
 	importOrderGroupNamespaceSpecifiers: true,
 	importOrder: [
+		'<THIRD_PARTY_MODULES>',
+		'^@(.*)$',
 		'^@/env/(.*)$',
 		'^@/app/(.*)$',
 		'^@/trpc/(.*)$',
 		'^@/server/(.*)$',
-		'^[./]',
+		'^@/styles/(.*)$',
 	],
 };
 

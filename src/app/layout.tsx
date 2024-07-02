@@ -1,7 +1,8 @@
-import '@/styles/globals.css';
 import { GeistSans } from 'geist/font/sans';
 
+import '@/styles/globals.css';
 import { TRPCReactProvider } from '@/trpc/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata = {
 	title: 'Create T3 App',
@@ -17,7 +18,10 @@ export default function RootLayout({
 	return (
 		<html lang="en" className={`${GeistSans.variable}`}>
 			<body>
-				<TRPCReactProvider>{children}</TRPCReactProvider>
+				<TRPCReactProvider>
+					{children}
+					<SpeedInsights />
+				</TRPCReactProvider>
 			</body>
 		</html>
 	);
